@@ -1,3 +1,6 @@
-from .db import db
+from .db import db, environment, SCHEMA
 from .user import User
-from .db import environment, SCHEMA
+from .board import Board
+from .list import List
+from .card import Card
+from .comment import Comment
