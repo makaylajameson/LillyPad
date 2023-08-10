@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 5d2c5ae326d1
+Revision ID: 9d2952d6ed4e
 Revises:
-Create Date: 2023-08-08 18:46:02.041325
+Create Date: 2023-08-10 17:51:09.061094
 
 """
 from alembic import op
@@ -12,9 +12,8 @@ import os
 environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
 
-
 # revision identifiers, used by Alembic.
-revision = '5d2c5ae326d1'
+revision = '9d2952d6ed4e'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -41,8 +40,8 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=100), nullable=False),
     sa.Column('background_image', sa.String(length=255), nullable=False),
-    sa.Column('user_id', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.Column('owner_id', sa.Integer(), nullable=False),
+    sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     if environment == "production":
@@ -79,11 +78,10 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+
     if environment == "production":
         op.execute(f"ALTER TABLE comments SET SCHEMA {SCHEMA};")
-
     # ### end Alembic commands ###
-
 
 
 def downgrade():

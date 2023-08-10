@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
 
     # Relationships
-    board = db.relationship('Board', back_populates='user')
+    board = db.relationship('Board', back_populates='owner')
     comments_created = db.relationship("Comment", back_populates="author")
 
     @property

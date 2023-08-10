@@ -12,10 +12,10 @@ class Board(db.Model):
     background_image = db.Column(db.String(255), nullable=False)
 
     # Foreign Keys
-    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")), nullable=False)
+    owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")), nullable=False)
 
     # Relationships
-    user = db.relationship("User", back_populates="board")
+    owner = db.relationship("User", back_populates="board")
     lists = db.relationship("List", back_populates="board", cascade="all, delete-orphan")
 
     def to_dict(self):
@@ -23,6 +23,6 @@ class Board(db.Model):
             "id": self.id,
             "title": self.title,
             "background_image": self.background_image,
-            "user": self.user.to_dict(),
+            "owner": self.owner.to_dict(),
             "lists": [list.to_dict() for list in self.lists]
         }
