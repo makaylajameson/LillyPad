@@ -134,11 +134,11 @@ function SignupFormModal() {
 					/>
 				</label>
 				{frontendErrors.confirmPassword && confirmPassword.length > 0 && <p className='on-submit-frontendErrors'>{frontendErrors.confirmPassword}</p>}
-				{/* <ul>
+				<ul>
 					{errors.map((error, idx) => (
 						<li key={idx}>{error}</li>
 					))}
-				</ul> */}
+				</ul>
 				<button type="submit">Sign Up</button>
 			</form>
 		</>
