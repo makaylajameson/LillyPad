@@ -5,7 +5,7 @@ import DeleteBoardModal from '../DeleteBoardModal'
 
 const BoardCard = ({ board }) => {
     return (
-        <div style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${board.background_image})` }}>
+        <div style={{ backgroundImage: `url(${board.background_image})` }}>
             <Link to={`/boards/${board.id}`}><h4>{board.title}</h4></Link>
             <ul>
                 <OpenModalButton

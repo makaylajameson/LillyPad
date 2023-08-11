@@ -4,6 +4,7 @@ import { useModal } from "../../context/Modal";
 import { useHistory } from "react-router-dom";
 import { editBoardThunk } from "../../store/boards";
 import Background from '../board/background.svg'
+import './Board.css'
 
 const background_urls = [
     "https://i.pinimg.com/564x/20/0e/e4/200ee4aa6b62a91040f7d7c0123e1ee2.jpg",
