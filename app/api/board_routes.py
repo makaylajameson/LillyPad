@@ -37,8 +37,8 @@ def get_single_board(id):
     if board is None:
         return {"errors": "This Board could not be found"}, 404
 
-    single_board = board.to_dict()
-    return {"single_board": single_board}
+    res = board.to_dict()
+    return {"single_board": res}
 
 # create a new board
 @board_routes.route("/current", methods=["POST"])
@@ -63,7 +63,7 @@ def create_board():
 
     if form.errors:
         print(form.errors)
-        return {'errors': validation_errors_to_error_messages(form.errors)}
+        return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 # Edit an current users board
 @board_routes.route("/<int:id>/edit", methods=["PUT"])
@@ -88,7 +88,7 @@ def edit_board(id):
 
     if form.errors:
         print(form.errors)
-        return {'errors': validation_errors_to_error_messages(form.errors)}
+        return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 # delete single board by id
 @board_routes.route("/<int:id>", methods=["DELETE"])
@@ -99,9 +99,6 @@ def delete_board(id):
 
     if board is None:
         return {"errors": "This Board could not be found"}, 404
-
-    if board.owner_id != current_user.id:
-        return {"errors": "Only the owner of this board can delete"}, 401
 
     db.session.delete(board)
     db.session.commit()

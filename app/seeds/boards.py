@@ -14,7 +14,7 @@ def seed_boards():
         owner_id=1,
     )
 
-    db.session.add(demo_board_two)
+    db.session.add(demo_board_one)
     db.session.add(demo_board_two)
     db.session.commit()
 

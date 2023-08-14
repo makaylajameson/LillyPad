@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
-import { deleteBoardThunk } from "../../store/boards";
+import { deleteBoardThunk } from "../../store/board";
 
 
 const DeleteBoardModal = ({ boardId }) => {

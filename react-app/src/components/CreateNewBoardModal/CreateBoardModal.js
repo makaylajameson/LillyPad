@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
-import { createBoardThunk } from '../../store/boards';
+import { createBoardThunk } from '../../store/board';
 import Background from './background.svg';
 import './Board.css'
 

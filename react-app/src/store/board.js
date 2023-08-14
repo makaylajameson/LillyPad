@@ -4,8 +4,9 @@ import { normalizeObj } from './normalizeHelper';
 const GET_USER_BOARDS = 'boards/GET_USER_BOARDS';
 const GET_SINGLE_BOARD = 'boards/GET_SINGLE_BOARD';
 const CREATE_NEW_BOARD = 'boards/CREATE_NEW_BOARD';
-const EDIT_BOARD = 'board/EDIT_BOARD';
+const EDIT_BOARD = 'boards/EDIT_BOARD';
 const DELETE_BOARD = 'boards/DELETE_BOARD';
+
 
 // Action Creator
 const getUserBoards = (boards) => ({
@@ -42,19 +43,20 @@ export const getUserBoardsThunk = () => async (dispatch) => {
         dispatch(getUserBoards(boards))
         return
     } else {
-        console.log("Cannot display current user's boards")
+        const errors = await response.json()
+        return errors
     }
 };
 
 export const getSingleBoardThunk = (id) => async (dispatch) => {
     const response = await fetch(`/api/boards/${id}`)
+
     if (response.ok) {
-        const { get_single_board } = await response.json()
+        const  get_single_board  = await response.json()
         dispatch(getSingleBoard(get_single_board))
         return
     } else {
         const errors = await response.json()
-        console.log(errors)
         return errors
     }
 };
@@ -70,7 +72,6 @@ export const createBoardThunk = (FormData) => async (dispatch) => {
         return board;
     } else {
         const data = await response.json()
-        console.log(data)
         return data
     }
 };
@@ -87,7 +88,6 @@ export const editBoardThunk = (id, formData) => async (dispatch) => {
         return board;
     } else {
         const data = await response.json()
-        console.log(data)
         return data
     }
 };
@@ -102,7 +102,6 @@ export const deleteBoardThunk = (id) => async dispatch => {
         return data
     } else {
         const data = await response.json()
-        console.log(data)
         return data
     }
 };
@@ -121,7 +120,7 @@ const boardReducer = (state = initialState, action) => {
             return { ...state, userBoards: { ...normalizeObj(action.boards) } }
 
         case GET_SINGLE_BOARD:
-            return { ...state, singleBoard: { ...action.board } }
+            return { ...state, singleBoard: { ...action.board.single_board } }
 
         case CREATE_NEW_BOARD:
             return { ...state, userBoards: { ...state.userBoards, [action.board.id]: action.board } }
