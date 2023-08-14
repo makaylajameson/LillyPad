@@ -1,7 +1,7 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .boards import seed_boards, undo_boards
-from .lists import seed_lists, undo_lists
+from .list import seed_lists, undo_lists
 
 from app.models.db import db, environment, SCHEMA
 
