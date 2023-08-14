@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { useHistory } from "react-router-dom";
 import { editBoardThunk } from "../../store/board";
-import Background from '../background.svg'
+import Background from './background.svg'
 import './Board.css'
 
 const background_urls = [
