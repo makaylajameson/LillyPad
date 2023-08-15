@@ -5,6 +5,7 @@ import { getSingleBoardThunk } from '../../store/board'
 import OpenModalButton from "../OpenModalButton";
 import CreateListModal from "./CreateListModal";
 import List from './List'
+import './BoardModal.css'
 
 const SingleBoardPage = () => {
 
@@ -19,20 +20,28 @@ const SingleBoardPage = () => {
     if (!singleDetail) return <div> Loading..</div>
 
     return (
-        <div className="page" >
-            <div className="board-title">
-                <h2>{singleDetail.title}</h2>
+        <div>
+
+            <h2 className="single-board-title">{singleDetail.title}</h2>
+
+            <div className="page" style={{ backgroundImage: `url(${singleDetail?.background_image})` }}>
+
+
+
+                <ul className="lists-container" >
+                    <div className="single-list-detail">
+                        {singleDetail.lists?.map((list) => <List key={list.id} list={list} />)}
+
+                        <div className="add-list" >
+                            <OpenModalButton
+                                buttonText={<><i className="fas fa-plus" /> Add a list</>}
+                                modalComponent={<CreateListModal boardId={id} />}
+
+                            />
+                        </div>
+                    </div>
+                </ul>
             </div>
-            <ul className="lists-container" >
-
-                {singleDetail.lists?.map((list) => <List key={list.id} list={list} />)}
-
-                <OpenModalButton
-                    buttonText={<><i className="fas fa-plus" /> Add a list</>}
-                    modalComponent={<CreateListModal boardId={id} />}
-                    className="add-list"
-                />
-            </ul>
         </div>
     )
 }

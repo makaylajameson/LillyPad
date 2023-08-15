@@ -3,25 +3,34 @@ import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { createBoardThunk } from '../../store/board';
 import Background from './background.svg';
-import './Board.css'
+import './Board.css';
 
-const background_urls = [
-    "https://i.pinimg.com/564x/20/0e/e4/200ee4aa6b62a91040f7d7c0123e1ee2.jpg",
-    "https://i.pinimg.com/564x/73/51/17/735117e0d39ddc6d85ccbc2b5c3b0fc1.jpg",
-    "https://i.pinimg.com/564x/8d/73/04/8d730490141a27fa366fbd3750bbfe94.jpg",
-    "https://i.pinimg.com/564x/b2/89/ba/b289ba951f1bc9522c8bfa318cbd7659.jpg",
-    "https://i.pinimg.com/564x/7c/bc/1e/7cbc1ea9e2a55e6c6607fa086d3a95c6.jpg",
-    "https://i.pinimg.com/564x/aa/cc/73/aacc7396ae301a02cb4023b47090ad5d.jpg",
-    "https://i.pinimg.com/736x/c0/6a/15/c06a15cff45dbc009d08029a7a4ed05a.jpg",
-    "https://i.pinimg.com/564x/c3/65/0f/c3650f46bf6501928cb5fc8814902b89.jpg"
-]
+import background1 from '../../assets/background-1.jpg';
+import background2 from '../../assets/background-2.jpg';
+import background3 from '../../assets/background-3.jpg';
+import background4 from '../../assets/background-4.jpg';
+import background5 from '../../assets/background-5.jpg';
+import background6 from '../../assets/background-6.jpg';
+import background7 from '../../assets/background-7.jpg';
+import background8 from '../../assets/background-8.jpg';
+
+const background_pics = [
+    background1,
+    background2,
+    background3,
+    background4,
+    background5,
+    background6,
+    background7,
+    background8,
+];
 
 
 const CreateBoardModal = () => {
+
     const dispatch = useDispatch();
     const { closeModal } = useModal();
-
-    const [backgroundUrl, setBackgroundUrl] = useState(background_urls[0]);
+    const [backgroundUrl, setBackgroundUrl] = useState(background_pics[0]);
     const [title, setTitle] = useState('');
     const [errors, setErrors] = useState({});
 
@@ -60,9 +69,9 @@ const CreateBoardModal = () => {
                         <img src={Background} alt="" className="mock-trello-card" />
                     </div>
 
-                <p>Background</p>
+                <p>Select Your Background:</p>
                 <div className="background-container">
-                    {background_urls.map((url) => {
+                    {background_pics.map((url) => {
                         return <button onClick={() => setBackgroundUrl(url)} className="background_images" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
                     })}
                 </div>

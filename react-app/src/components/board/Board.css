@@ -1,5 +1,71 @@
 .background_images {
     width: 40px;
     height: 40px;
+}
 
+.board-card-name {
+    color: white;
+    font-size: 17px;
+    padding-left: 15px;
+    width: 160px;
+    margin-top: 8px;
+}
+
+.board-page-title {
+    color: #b6c2cf;
+    padding-left: 30px;
+    padding-top: 90px;
+}
+
+.board-card-img {
+    background-size: cover;
+    width: 230px;
+    height: 130px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+
+}
+
+.board-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 28px;
+    width: 1026px;
+
+}
+
+.board-card-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding-top: 1px; */
+    padding-bottom: 95px;
+    padding-right: 10px;
+    background: transparent;
+}
+
+.create-new-board-button button {
+
+    width: 230px;
+    height: 130px;
+    border-radius: 5px;
+    background-color: #3b403c;
+    color: #9fadbc;
+    border: none;
+}
+
+
+
+.modal-button-board-card button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.924);
+    border: none;
+    cursor: pointer;
+    padding: 3px;
 }

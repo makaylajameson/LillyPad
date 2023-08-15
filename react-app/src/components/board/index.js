@@ -19,19 +19,25 @@ const CurrentBoardsPage = () => {
     if (!currentBoards) return <h3>Loading...</h3>
 
     return (
-        <>
+        <div>
+            <div className="board-page-title-container">
+                <h2 className="board-page-title">
+                    <i className="far fa-user"></i> Your Boards
+                </h2>
+            </div>
 
-                <h2 className="page-title">My Boards</h2>
-                <ul>
-                    <OpenModalButton
-                        buttonText="Create new board"
-                        modalComponent={<CreateBoardModal />}
-                        className="new-board-button"
-                    />
+            <div>
+                <div className="board-card-container">
                     {userBoardsArr.map((board) => <BoardCard board={board} key={board.id} />)}
-                </ul>
-
-        </>
+                    <div className="create-new-board-button">
+                        <OpenModalButton
+                            buttonText="Create new board"
+                            modalComponent={<CreateBoardModal />}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 
