@@ -19,7 +19,7 @@ const DeleteListModal = ({ list }) => {
     return (
         <div className="delete-modal-container">
             <div className="delete-modal-inner-container">
-                <p className='confirm-delete'>Confirm you would like to delete this list:</p>
+                <p className='confirm-delete'>Are you sure you want to delete this list?</p>
                 <div className="delete-button-container">
                     <button onClick={closeModal} className="cancel-delete-button">Cancel</button>
                     <button className="delete-button" onClick={deleteList}>Delete</button>

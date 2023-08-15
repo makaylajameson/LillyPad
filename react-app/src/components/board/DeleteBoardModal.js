@@ -16,7 +16,7 @@ const DeleteBoardModal = ({ boardId }) => {
     return (
         <div className="delete-modal-container">
 
-                <p className='confirm-delete'>Confirm you would like to delete this board:</p>
+                <p className='confirm-delete'>Are you sure you want to delete this Board?</p>
 
                 <div className="delete-button-container">
                     <button onClick={closeModal} className="cancel-delete-button">Cancel</button>

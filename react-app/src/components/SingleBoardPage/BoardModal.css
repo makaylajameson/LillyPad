@@ -44,3 +44,8 @@
 .single-list-title {
     width: 100px;
 }
+
+.profile-pic-board {
+    width: 60px;
+    border-radius: 10px;
+}

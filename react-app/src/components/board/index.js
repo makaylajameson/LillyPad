@@ -11,6 +11,7 @@ const CurrentBoardsPage = () => {
     const currentBoards = useSelector(state => state.boards.userBoards)
     const userBoardsArr = Object.values(currentBoards)
     const dispatch = useDispatch()
+    const user = useSelector(state => state.session.user)
 
     useEffect(() => {
         dispatch(getUserBoardsThunk())
@@ -21,8 +22,16 @@ const CurrentBoardsPage = () => {
     return (
         <div>
             <div className="board-page-title-container">
+
+
                 <h2 className="board-page-title">
-                    <i className="far fa-user"></i> Your Boards
+                    <div className="user-img-name">
+                        <img className="profile-pic-board" src={user.profile_pic} />
+                        <div>{user.first_name} {user.last_name}'s workspace</div>
+                    </div>
+                    <div className="your-boards-title">
+                        <i className="far fa-user"></i> Your Boards
+                    </div>
                 </h2>
             </div>
 

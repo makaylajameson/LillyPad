@@ -58,6 +58,7 @@
     background-color: #3b403c;
     color: #9fadbc;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -68,4 +69,17 @@
     border: none;
     cursor: pointer;
     padding: 3px;
+}
+
+.user-img-name {
+    display: flex;
+    flex-direction: row;
+    border-bottom: .5px solid #b6c2cfa4;
+    padding-bottom: 10px;
+    align-items: center;
+    gap: 8px;
+}
+
+.your-boards-title {
+    padding-top: 10px;
 }
