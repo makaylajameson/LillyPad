@@ -8,11 +8,11 @@
 }
 
 .logo {
-  width: 100px;
+  width: 110px;
 }
 
 .navigation-header {
   display: flex;
   flex-direction: row;
-  gap: 870px
+  gap: 860px
 }
