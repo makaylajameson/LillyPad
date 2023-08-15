@@ -5,3 +5,13 @@
 .hidden {
   display: none;
 }
+
+.logo {
+  width: 100px;
+}
+
+.navigation-header {
+  display: flex;
+  flex-direction: row;
+  gap: 870px
+}
