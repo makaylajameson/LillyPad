@@ -71,7 +71,7 @@ const EditBoardModal = ({ boardId }) => {
                 <p className="create-board-title">Edit board below:</p>
 
 
-                    <div style={{ backgroundImage: `url(${backgroundUrl})` }}>
+                    {/* <div style={{ backgroundImage: `url(${backgroundUrl})` }}>
                         <img src={Background} alt=""/>
                     </div>
 
@@ -94,7 +94,37 @@ const EditBoardModal = ({ boardId }) => {
                         <span className='error-field'>{errors.title}</span>
                     </label>
                     <button type="submit" className='create-button'>Update Board</button>
+                </form> */}
+                   <div className="background-board-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>
+                <img src={Background} alt="" className="mock-background" />
+            </div>
+
+            <p className='select-background'>Select Your Background:</p>
+            <div className="background-container">
+                {background_pics.map((url) => {
+                    return <button onClick={() => setBackgroundUrl(url)} className="background_images" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
+                })}
+            </div>
+
+            <div className='board-title-submit'>
+                <form onSubmit={handleSubmit} >
+                    <div className='board-input-row'>
+                        <label className='board-title'>
+                            Board title:
+                            <input
+                                type="text"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                required
+                            />
+                            <span className='error-field'>{errors.title}</span>
+                        </label>
+                    </div>
+                    <div className='button-row'>
+                        <button disabled={Object.keys(errors).length > 0} type="submit" className='create-button'>Update</button>
+                    </div>
                 </form>
+            </div>
             </div>
     )
 }

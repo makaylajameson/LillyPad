@@ -62,34 +62,42 @@ const CreateBoardModal = () => {
     }
 
     return (
-            <div>
-                <p className="create-board-title">Create board</p>
+        <div>
+            <p className="create-board-title">Create board</p>
 
-                    <div className="trello-card-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>
-                        <img src={Background} alt="" className="mock-trello-card" />
-                    </div>
+            <div className="background-board-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>
+                <img src={Background} alt="" className="mock-background" />
+            </div>
 
-                <p>Select Your Background:</p>
-                <div className="background-container">
-                    {background_pics.map((url) => {
-                        return <button onClick={() => setBackgroundUrl(url)} className="background_images" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
-                    })}
-                </div>
+            <p className='select-background'>Select Your Background:</p>
+            <div className="background-container">
+                {background_pics.map((url) => {
+                    return <button onClick={() => setBackgroundUrl(url)} className="background_images" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
+                })}
+            </div>
 
+            <div className='board-title-submit'>
                 <form onSubmit={handleSubmit} >
-                    <label>
-                        Board title
-                        <input
-                            type="text"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                            required
-                        />
-                        <span className='error-field'>{errors.title}</span>
-                    </label>
-                    <button type="submit" className='create-button'>Create Board</button>
+                    <div className='board-input-row'>
+                        <label className='board-title'>
+                            Board title:
+                            <input
+                                type="text"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                required
+                            />
+                            <span className='error-field'>{errors.title}</span>
+                        </label>
+                    </div>
+                    <div className='button-row'>
+                        <button disabled={Object.keys(errors).length > 0} type="submit" className='create-button'>Create</button>
+                    </div>
                 </form>
             </div>
+
+
+        </div>
 
     )
 }

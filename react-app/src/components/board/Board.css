@@ -61,8 +61,6 @@
     cursor: pointer;
 }
 
-
-
 .modal-button-board-card button {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.924);
@@ -82,4 +80,83 @@
 
 .your-boards-title {
     padding-top: 10px;
+}
+
+/* Create New Board */
+.background-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 5px;
+}
+
+.background_images {
+    background-size: cover;
+    border: none;
+    height: 50px;
+    width: 85px;
+    border-radius: 5px;
+}
+
+.background-board-img {
+    background-size: cover;
+    width: 220px;
+    margin-left: 75px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.mock-background {
+    padding-top: 10px;
+    padding-left: 17px;
+}
+
+.error-field {
+    color: red;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.create-board-title {
+    color: #9fadbc;
+    font-size: larger;
+    justify-content: center;
+    display: flex;
+}
+
+#modal-content {
+    background-color: #292c2a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.select-background {
+    color: #9fadbc;
+    padding-left: 8px;
+    font-size: large;
+}
+
+.board-title {
+    color: #9fadbc;
+    padding-top: 10px;
+    width: 335px;
+}
+
+.button-row{
+    padding-top: 20px;
+    padding-left: 135px;
+    padding-bottom: 10px;
+}
+
+.board-input-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.board-title-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
