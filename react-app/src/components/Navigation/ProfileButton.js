@@ -15,6 +15,7 @@ function ProfileButton({ user }) {
   const history = useHistory();
 
 
+
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
@@ -42,8 +43,8 @@ function ProfileButton({ user }) {
   const handleLogout = async (e) => {
     e.preventDefault();
     await dispatch(sessionActions.logout());
-    closeMenu();
-    history.push('/');
+    await closeMenu();
+    await history.push('/');
   };
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
@@ -57,7 +58,7 @@ function ProfileButton({ user }) {
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <div className="user-first-name">{user?.first_name} {user?.last_name}</div>
+            <div className="user-first-name">{user.first_name} {user.last_name}</div>
             <div className="user-email">{user.email}</div>
             <div>
               <button className="logout-button" onClick={handleLogout}>Log Out</button>
