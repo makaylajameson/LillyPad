@@ -68,34 +68,9 @@ const EditBoardModal = ({ boardId }) => {
 
     return (
         <div className="create-board-container">
-                <p className="create-board-title">Edit board below:</p>
+            <p className="create-board-title">Edit board below:</p>
 
-
-                    {/* <div style={{ backgroundImage: `url(${backgroundUrl})` }}>
-                        <img src={Background} alt=""/>
-                    </div>
-
-                <p>Background</p>
-                <div className="background-container">
-                    {background_pics.map((url) => {
-                        return <button onClick={() => setBackgroundUrl(url)} className="background_images" style={{ 'background-image': `url(${url})`, 'objectFit': 'contain' }}></button>
-                    })}
-                </div>
-
-                <form onSubmit={handleSubmit} className='board-form'>
-                    <label className='board-title'>
-                        Board title
-                        <input
-                            type="text"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                            required
-                        />
-                        <span className='error-field'>{errors.title}</span>
-                    </label>
-                    <button type="submit" className='create-button'>Update Board</button>
-                </form> */}
-                   <div className="background-board-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>
+            <div className="background-board-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>
                 <img src={Background} alt="" className="mock-background" />
             </div>
 
@@ -125,7 +100,7 @@ const EditBoardModal = ({ boardId }) => {
                     </div>
                 </form>
             </div>
-            </div>
+        </div>
     )
 }
 
