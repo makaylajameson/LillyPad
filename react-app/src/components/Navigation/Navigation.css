@@ -1,6 +1,35 @@
 .profile-dropdown {
   position: absolute;
-  right: 25px;
+  right: 55px;
+  top: 50px;
+  border: .5px solid #b6c2cf;
+  background-color: #5e6873;
+  padding: 20px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.logout-button {
+  margin-top: 20px;
+  border: none;
+  background-color: transparent;
+  color: #b6c2cf;
+  cursor: pointer;
+}
+
+.user-first-name {
+  color: #b6c2cf;
+}
+
+.user-email {
+  color: #b6c2cf;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #b6c2cf;
+
 }
 
 .hidden {
@@ -9,15 +38,16 @@
 
 .logo {
   width: 100px;
-  padding-left: 20px;
 }
 
-.navigation-header {
+.navbar-container {
   display: flex;
   flex-direction: row;
-  width: 1030px;
-  border-bottom: .5px solid #b6c2cf80;
-  padding-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #1d2125;
+  border-bottom: .5px solid #b6c2cf4f;
 }
 
 .profile-pic {
@@ -29,7 +59,27 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  padding-left: 860px;
+  /* padding-left: 860px; */
+}
 
+.log-in {
+  color: #b6c2cf;
+}
 
+.email-label {
+  margin-bottom: 10px;
+  color: #b6c2cf;
+}
+
+.current-boards {
+  text-decoration: none;
+  color: #9fadbc;
+  display: flex;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-nav-container {
+  display: flex;
 }

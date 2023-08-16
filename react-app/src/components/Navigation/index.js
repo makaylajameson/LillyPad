@@ -38,11 +38,17 @@ function Navigation({ isLoaded }) {
             {isLoaded && (
                 <div className='navigation-header'>
                     {sessionUser ? (
-                        <div>
+                        <div className='navbar-container'>
                             <NavLink exact to="/" activeClassName="active-link" onClick={handleLogoClick}>
                                 <img src={logo} className="logo" alt="Logo" />
                             </NavLink>
+
+                            <div className='right-nav-container'>
+
+                            <NavLink exact to="/boards/current" className='current-boards'>My Boards</NavLink>
+
                             <ProfileButton user={sessionUser} />
+                            </div>
                         </div>
                     ) : (
                         <div className='login-signup-modal'>

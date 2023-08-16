@@ -49,3 +49,28 @@
     width: 60px;
     border-radius: 10px;
 }
+
+.create-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* Adds space between input and error message */
+}
+
+.list-error-field {
+    color: red;
+    padding-top: 5px;
+}

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useModal } from "../../../context/Modal";
 import { createListThunk } from "../../../store/list";
 import { getSingleBoardThunk} from "../../../store/board"
+import '../BoardModal.css'
 
 const CreateListModal = ({ boardId }) => {
 
@@ -10,13 +11,13 @@ const CreateListModal = ({ boardId }) => {
     const { closeModal } = useModal();
     const [title, setTitle] = useState('');
     const [errors, setErrors] = useState({});
-    const [serverError, setServerError] = useState(false);
+    const [, setServerError] = useState(false);
 
     useEffect(() => {
         let serverError = {};
 
-        if (!title.length) serverError["title"] = "List title is required"
-        if (title.length > 100) serverError["title"] = "Title must be less than 100 characters"
+        if (!title.length) serverError["title"] = "👋 List title is required"
+        if (title.length > 100) serverError["title"] = " 👋 Title must be less than 100 characters"
         setErrors(serverError)
     }, [title])
 
@@ -42,25 +43,26 @@ const CreateListModal = ({ boardId }) => {
         }
       };
 
-
-    return (
-        <div className="create-list-inner-container">
+      return (
+        <div className="create-list-container">
             <form onSubmit={handleSubmit} className='list-form'>
-                <label className='list-title-field'>
-                    Enter list title
+                <div className="form-group">
                     <input
                         className="list-input-text"
                         type="text"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
+                        placeholder="Enter list title.."
                         required
                     />
-                    <span className='error-field'>{errors.title}</span>
-                </label>
-                <button type="submit" className='create-button'>Add List</button>
+                    <span className='list-error-field'>{errors.title}</span>
+                </div>
+                <button type="submit" className='create-list-button'>Add List</button>
             </form>
         </div>
-    )
+    );
+
+
 }
 
 export default CreateListModal
