@@ -26,7 +26,6 @@
     flex-direction: row;
     justify-content: center;
     border: none;
-
 }
 
 .board-card-container {
@@ -124,11 +123,10 @@
     display: flex;
 }
 
-#modal-content {
-    /* background-color: #292c2a; */
+/* #modal-content {
     border-radius: 10px;
     padding: 10px;
-}
+} */
 
 .select-background {
     color: #9fadbc;
@@ -163,4 +161,8 @@
 
 .create-board-container {
 border-radius: 10px;
+}
+
+.board-page-container {
+    min-height: 550px;
 }
