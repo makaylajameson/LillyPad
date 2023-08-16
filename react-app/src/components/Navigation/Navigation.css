@@ -8,27 +8,28 @@
 }
 
 .logo {
-  width: 130px;
-  padding-left: 30px;
-  padding-top: 12px;
+  width: 100px;
+  padding-left: 20px;
 }
 
 .navigation-header {
   display: flex;
   flex-direction: row;
-  gap: 780px;
-  width: 1026px;
+  width: 1030px;
+  border-bottom: .5px solid #b6c2cf80;
+  padding-bottom: 5px;
 }
 
 .profile-pic {
   border-radius: 50%;
-  width: 40px;
+  width: 30px;
 }
 
 .profile-pic-button {
   border: none;
   background: transparent;
-  padding-top: 3px;
   cursor: pointer;
+  padding-left: 860px;
+
 
 }

@@ -14,7 +14,7 @@
 .board-page-title {
     color: #b6c2cf;
     padding-left: 30px;
-    padding-top: 90px;
+    padding-top: 50px;
 }
 
 .board-card-img {
@@ -72,14 +72,14 @@
 .user-img-name {
     display: flex;
     flex-direction: row;
-    border-bottom: .5px solid #b6c2cfa4;
-    padding-bottom: 10px;
+    border-bottom: .5px solid #b6c2cf8f;
+    padding-bottom: 20px;
     align-items: center;
     gap: 8px;
 }
 
 .your-boards-title {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /* Create New Board */
