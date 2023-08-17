@@ -164,5 +164,6 @@ border-radius: 10px;
 }
 
 .board-page-container {
-    min-height: 550px;
+    box-sizing: border-box;
+    height: 55vw;
 }

@@ -26,8 +26,6 @@ const SingleBoardPage = () => {
 
             <div className="page" style={{ backgroundImage: `url(${singleDetail?.background_image})` }}>
 
-
-
                 <ul className="lists-container" >
                     <div className="single-list-detail">
                         {singleDetail.lists?.map((list) => <List key={list.id} list={list} />)}

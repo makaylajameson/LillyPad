@@ -1,0 +1,53 @@
+.log-in-splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    min-width: 250px;
+
+}
+
+.log-in-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+
+.log-in-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-in-form input {
+    height: 22px;
+}
+
+.demo-user-button {
+    padding: 8px;
+    width: 150px;
+    background-color: rgb(0, 101, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+.log-in-submit {
+    padding: 8px;
+    width: 150px;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.errors-and-login {
+    color: red;
+}

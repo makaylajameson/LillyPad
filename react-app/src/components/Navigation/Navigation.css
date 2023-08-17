@@ -83,3 +83,11 @@
 .right-nav-container {
   display: flex;
 }
+
+.splash-logo {
+  width: 100px;
+  height: 25px;
+  padding-left: 20px;
+  padding-top: 10px;
+
+}

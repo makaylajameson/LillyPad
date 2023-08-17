@@ -62,9 +62,9 @@ function SignupFormModal() {
 	};
 
 	return (
-		<>
+		<div className="signup-modal">
 			<h1>Sign Up</h1>
-			<form onSubmit={handleSubmit} encType="multipart/form-data">
+			<form onSubmit={handleSubmit} encType="multipart/form-data" className="signup-form">
 				<label>
 					First Name
 					<input
@@ -107,7 +107,7 @@ function SignupFormModal() {
 				</label>
 				{frontendErrors.username && username.length > 0 && <p className='on-submit-frontendErrors'>{frontendErrors.username}</p>}
 				<label>
-					Profile Image
+					Profile Image - Optional!
 					<input
 						type="file"
 						accept="image/*"
@@ -139,9 +139,9 @@ function SignupFormModal() {
 						<li key={idx}>{error}</li>
 					))}
 				</ul>
-				<button type="submit">Sign Up</button>
+				<button className="sign-up-button" type="submit">Sign Up</button>
 			</form>
-		</>
+		</div>
 	);
 }
 

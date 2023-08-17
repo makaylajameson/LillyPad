@@ -13,7 +13,6 @@ const CurrentBoardsPage = () => {
     const userBoardsArr = Object.values(currentBoards)
     const dispatch = useDispatch()
     const user = useSelector(state => state.session.user)
-    console.log('THIS IS THE USER', user)
 
     useEffect(() => {
         dispatch(getUserBoardsThunk())

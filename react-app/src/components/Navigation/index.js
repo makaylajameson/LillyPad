@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import OpenModalButton from '../OpenModalButton';
 import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupFormModal";
 import './Navigation.css';
 import logo from './logo/lillypad.png';
 
@@ -45,27 +44,26 @@ function Navigation({ isLoaded }) {
 
                             <div className='right-nav-container'>
 
-                            <NavLink exact to="/boards/current" className='current-boards'>My Boards</NavLink>
+                                <NavLink exact to="/boards/current" className='current-boards'>My Boards</NavLink>
 
-                            <ProfileButton user={sessionUser} />
+                                <ProfileButton user={sessionUser} />
                             </div>
                         </div>
                     ) : (
-                        <div className='login-signup-modal'>
+                        <div>
                             <div className='log-in-modal'>
-                                <OpenModalButton
-                                    buttonText="Log In"
-                                    onItemClick={closeMenu}
-                                    modalComponent={<LoginFormModal />}
-                                />
+
+                                <img src={logo} className="splash-logo" alt="Logo" />
+
+                                <div className='log-in-modal'>
+                                    <OpenModalButton
+                                        buttonText="Log In"
+                                        onItemClick={closeMenu}
+                                        modalComponent={<LoginFormModal />}
+                                    />
+                                </div>
                             </div>
-                            <div className='sign-up-modal'>
-                                <OpenModalButton
-                                    buttonText="Sign Up"
-                                    onItemClick={closeMenu}
-                                    modalComponent={<SignupFormModal />}
-                                />
-                            </div>
+
                         </div>
                     )}
                 </div>

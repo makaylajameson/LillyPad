@@ -53,52 +53,52 @@ function LoginFormModal() {
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div>
-        <h1 className='log-in' style={{ textAlign: 'center' }}>Log In</h1>
-        <form className='log-in-container' onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
-          <label className="email-label">
-            Email:
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="email-label"
-              required
-            />
-          </label>
-          <br />
-          <label className="email-label">
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="email-label"
-              required
-            />
-          </label>
-          <br />
-          <div className='errors-and-login'>
-            {frontendErrors.email && email.length > 0 && (
-              <p className='on-submit-errors'>{frontendErrors.email}</p>
-            )}
-            {frontendErrors.password && password.length > 0 && (
-              <p className='on-submit-errors'>{frontendErrors.password}</p>
-            )}
-            {errors.map((error, idx) => (
-              <p className='on-submit-errors' key={idx}>{error}</p>
-            ))}
+    <div className="log-in-splash">
+
+
+      <form className='log-in-form' onSubmit={handleSubmit} >
+        <h1 >Log In</h1>
+        <label>
+          Email:
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+
+            required
+          />
+        </label>
+        <br />
+        <label >
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <div className='errors-and-login'>
+          {frontendErrors.email && email.length > 0 && (
+            <p className='on-submit-errors'>{frontendErrors.email}</p>
+          )}
+          {frontendErrors.password && password.length > 0 && (
+            <p className='on-submit-errors'>{frontendErrors.password}</p>
+          )}
+          {errors.map((error, idx) => (
+            <p className='on-submit-errors' key={idx}>{error}</p>
+          ))}
+        </div>
+        <div className='login-and-demo-user'>
+          <button disabled={Object.keys(frontendErrors).length > 0} className='log-in-submit' type="submit">Log In</button>
+          <div>
+            <button onClick={demoUser} className="demo-user-button">Demo User Account</button>
           </div>
-          <div className='login-and-demo-user'>
-            <button disabled={Object.keys(frontendErrors).length > 0} className='log-in-submit' type="submit">Log In</button>
-            <div>
-              <button onClick={demoUser} className="demo-user-button">Demo User Account</button>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
+
   );
 
 }
