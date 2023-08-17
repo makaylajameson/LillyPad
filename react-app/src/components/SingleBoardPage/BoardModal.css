@@ -74,3 +74,42 @@
     color: red;
     padding-top: 5px;
 }
+
+.delete-modal-container {
+    background-color:#25272a;
+    position: absolute;
+    bottom: -60px;
+    right: -160px;
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #9fadbc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.delete-button {
+    padding: 5px;
+    width: 70px;
+    background-color: rgb(0, 101, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+
+.cancel-delete-button {
+    margin-right: 5px;
+    padding: 5px;
+    width: 70px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}

@@ -67,7 +67,7 @@ const EditBoardModal = ({ boardId }) => {
     }
 
     return (
-        <div className="create-board-container">
+        <div className="create-board-modal">
             <p className="create-board-title">Edit board below:</p>
 
             <div className="background-board-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>

@@ -62,7 +62,7 @@ const CreateBoardModal = () => {
     }
 
     return (
-        <div>
+        <div className='create-board-modal'>
             <p className="create-board-title">Create board</p>
 
             <div className="background-board-img" style={{ backgroundImage: `url(${backgroundUrl})` }}>

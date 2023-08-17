@@ -167,3 +167,23 @@ border-radius: 10px;
     box-sizing: border-box;
     height: 55vw;
 }
+
+.create-board-modal {
+    background-color:#25272a;
+    position: absolute;
+    bottom: -230px;
+    right: -180px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.create-button {
+    padding: 8px;
+    width: 80px;
+    background-color: rgb(0, 101, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}

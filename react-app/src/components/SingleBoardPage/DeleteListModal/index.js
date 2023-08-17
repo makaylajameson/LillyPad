@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../../context/Modal";
 import { deleteListThunk } from "../../../store/list";
 import { getSingleBoardThunk} from "../../../store/board"
+import '../BoardModal.css';
 
 
 const DeleteListModal = ({ list }) => {
