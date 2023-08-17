@@ -1,8 +1,17 @@
-**Welcome to LillyPad!**
+## Welcome to LillyPad!
 
-Check out [LillyPad](https://lilly-pad.onrender.com)
+Check out [LillyPad](https://lilly-pad.onrender.com) on Render.
 
 ![ezgif com-video-to-gif](https://github.com/makaylajameson/LillyPad/assets/122553432/c269ba6a-9742-4f02-a163-cf61002a5992)
+
+## Technologies Used:
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 
 
