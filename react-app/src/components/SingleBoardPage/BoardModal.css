@@ -2,7 +2,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .single-board-title {
@@ -13,13 +13,21 @@
 .list-header-container {
     color: rgba(255, 255, 255, 0.885);
     background: rgba(0, 0, 0, 0.815);
-    padding-left: 8px;
-    width: 150px;
+    /* padding-left: 8px; */
+    /* width: 150px; */
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 12px;
+    margin-top: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.list-container {
+    margin: 0px;
+    /* width: 200px; */
+
 }
 
 .single-list-detail {
@@ -32,7 +40,7 @@
     height: 40px;
     width: 150px;
     border-radius: 5px;
-    color: white;
+    color: black;
     background-color: rgba(255, 255, 255, 0.533);
     border: none;
 }
@@ -55,6 +63,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 .list-form {
     display: flex;
@@ -89,6 +98,14 @@
     justify-content: center;
     align-items: center;
     height: 70px;
+}
+
+.delete-modal-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
 }
 
 .delete-button {

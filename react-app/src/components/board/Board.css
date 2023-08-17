@@ -60,6 +60,10 @@
     cursor: pointer;
 }
 
+.create-new-board-button button:hover {
+    color: white;
+}
+
 .modal-button-board-card button {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.924);
