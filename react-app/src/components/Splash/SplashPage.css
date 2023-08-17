@@ -16,15 +16,11 @@
 }
 
 .wave-bar-img {
-    height: 150px;
-    width: 1026px;
+    max-width: 100%;
+    height: auto;
     overflow-x: hidden;
     position: relative;
     top: 8px;
-    /* left: 0px; */
-    /* right: 0px; */
-
-
 }
 
 .intro-img-container {

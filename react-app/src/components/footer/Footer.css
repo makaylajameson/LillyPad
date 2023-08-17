@@ -1,9 +1,10 @@
 .footer-container {
     background-color: rgb(29, 33, 37);
-    color: rgb(182, 194, 207);
-    backdrop-filter: blur(6px);
+    color: rgba(255, 255, 255, 0.874);
     border-top: 1px solid rgba(159, 173, 188, 0.16);
     padding: 20px;
+    min-height: 15vh;
+    margin-top: auto;
 }
 
 .footer-title {
@@ -18,21 +19,13 @@
     justify-content: center;
 }
 
-.person-container>a {
-    color: rgb(182, 194, 207);
-    margin-right: 4px;
-}
 
 .link-container>a {
     margin: 0 4px;
 }
 
-/* .portfolio-link {
-    color: rgb(182, 194, 207);
-    text-decoration: none;
-} */
 
 .fab {
-    color: rgb(182, 194, 207);
+    color: rgba(255, 255, 255, 0.879);
     font-size: 20px;
 }
