@@ -39,8 +39,8 @@ const CreateBoardModal = () => {
 
         const errors = {};
 
-        if (!title.length) errors["title"] = "Title is required";
-        if (title.length > 100) errors["title"] = "Title must be less than 100 characters";
+        if (!title.length) errors["title"] = "👋 Title is required";
+        if (title.length > 100) errors["title"] = "👋 Title must be less than 100 characters";
 
         setErrors(errors);
     }, [title]);

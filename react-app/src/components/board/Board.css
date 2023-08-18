@@ -118,10 +118,11 @@
     color: red;
     padding-left: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .create-board-title {
-    color: #9fadbc;
+    color: white;
     font-size: larger;
     justify-content: center;
     display: flex;
@@ -142,10 +143,17 @@
     color: #9fadbc;
     padding-top: 10px;
     width: 355px;
+    display: flex;
+    flex-direction: column;
+}
+
+.board-title input {
+    /* margin: 3px; */
+    margin-top: 10px;
 }
 
 .button-row{
-    padding-top: 20px;
+    padding-top: 5px;
     padding-left: 135px;
     padding-bottom: 10px;
 }

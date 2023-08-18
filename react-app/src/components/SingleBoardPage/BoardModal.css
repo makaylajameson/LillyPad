@@ -72,13 +72,52 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #25272a;
+    position: absolute;
+    bottom: -60px;
+    right: -160px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
+    height: 120px;
+}
+
+.enter-list-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #25272a;
+    position: absolute;
+    bottom: -60px;
+    right: -160px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 90px;
+
+}
+
+.create-list-button {
+    padding: 5px;
+    width: 70px;
+    background-color: rgb(0, 101, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px; /* Adds space between input and error message */
+    margin-bottom: 10px;
 }
 
 .list-error-field {
@@ -86,15 +125,19 @@
     padding-top: 5px;
 }
 
+.list-input-text {
+    margin-top: 5px;
+}
+
 .delete-modal-container {
-    background-color:#25272a;
+    background-color: #25272a;
     position: absolute;
     bottom: -60px;
     right: -160px;
     width: 350px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
-    color: #9fadbc;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,4 +174,11 @@
     border-radius: 5px;
     color: white;
     cursor: pointer;
+}
+
+.list-title-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

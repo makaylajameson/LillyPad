@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../../context/Modal";
 import { editListThunk } from '../../../store/list';
 import { getSingleBoardThunk } from '../../../store/board';
+import '../BoardModal.css';
 
 const EditListModal = ({ list }) => {
     const dispatch = useDispatch()
@@ -17,8 +18,8 @@ const EditListModal = ({ list }) => {
     useEffect(() => {
         let serverError = {}
 
-        if (!title.length) serverError["title"] = "List title is required"
-        if (title.length > 100) serverError["title"] = "Title must be less than 100 characters"
+        if (!title.length) serverError["title"] = "👋 List title is required"
+        if (title.length > 100) serverError["title"] = "👋 Title must be less than 100 characters"
         setErrors(serverError)
     }, [title])
 
@@ -58,7 +59,7 @@ const EditListModal = ({ list }) => {
                     />
                     <span className='error-field'>{errors.title}</span>
                 </label>
-                <button type="submit" className='create-button'>Update List</button>
+                <button type="submit" className='create-button'>Update</button>
             </form>
         </div>
     )

@@ -45,10 +45,9 @@ const CreateListModal = ({ boardId }) => {
 
       return (
         <div className="create-list-container">
-            <form onSubmit={handleSubmit} className='list-form'>
+            <form onSubmit={handleSubmit} className='enter-list-form'>
                 <div className="form-group">
                     <input
-                        className="list-input-text"
                         type="text"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
