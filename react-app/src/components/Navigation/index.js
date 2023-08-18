@@ -53,7 +53,7 @@ function Navigation({ isLoaded }) {
                         <div>
                             <div className='log-in-modal'>
 
-                                <img src={logo} className="splash-logo" alt="Logo" />
+                                <img src={logo} className="logo" alt="Logo" />
 
                                 <div className='log-in-modal'>
                                     <OpenModalButton

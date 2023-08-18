@@ -26,11 +26,11 @@
 }
 
 .user-first-name {
-  color: #b6c2cf;
+  color: white
 }
 
 .user-email {
-  color: #b6c2cf;
+  color: white;
   padding-bottom: 5px;
   border-bottom: 1px solid white;
 
@@ -42,6 +42,7 @@
 
 .logo {
   width: 100px;
+  padding-top: 8px;
 }
 
 .navbar-container {
@@ -88,13 +89,13 @@
   display: flex;
 }
 
-.splash-logo {
+/* .splash-logo {
   width: 100px;
   height: 25px;
   padding-left: 20px;
   padding-top: 10px;
 
-}
+} */
 
 .fa-user {
   color: white;

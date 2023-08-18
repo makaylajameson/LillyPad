@@ -20,7 +20,7 @@ const BoardCard = ({ board }) => {
 
                 <div className='modal-button-board-card'>
                     <OpenModalButton
-                        buttonText={<i className="fa-solid fa-x" />}
+                        buttonText={<i className="list-icon fas fa-trash" />}
                         modalComponent={<DeleteBoardModal boardId={board.id} />}
                     />
                 </div>
