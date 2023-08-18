@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { signUp } from "../../store/session";
+import { useHistory } from "react-router-dom";
 import "./SignupForm.css";
 
 function SignupFormModal() {
@@ -16,6 +17,7 @@ function SignupFormModal() {
 	const [errors, setErrors] = useState([]);
 	const [frontendErrors, setFrontendErrors] = useState({})
 	const { closeModal } = useModal();
+	const history = useHistory()
 
 	useEffect(() => {
 		const frontendErrors = {}
@@ -51,6 +53,7 @@ function SignupFormModal() {
 			if (data) {
 				setErrors(data);
 			} else {
+				await history.push('/boards/current')
 				await closeModal();
 			}
 		} else {
