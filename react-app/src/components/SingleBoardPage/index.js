@@ -5,7 +5,8 @@ import { getSingleBoardThunk } from '../../store/board'
 import OpenModalButton from "../OpenModalButton";
 import CreateListModal from "./CreateListModal";
 import List from './List'
-import './BoardModal.css'
+import './BoardModal.css';
+import Footer from "../footer";
 
 const SingleBoardPage = () => {
 
@@ -40,6 +41,7 @@ const SingleBoardPage = () => {
                     </div>
                 </ul>
             </div>
+            < Footer />
         </div>
     )
 }

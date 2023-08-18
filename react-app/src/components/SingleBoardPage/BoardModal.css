@@ -8,6 +8,8 @@
 .single-board-title {
     color: white;
     padding-left: 28px;
+    height: 15px;
+    /* margin-bottom: 5px; */
 }
 
 .list-header-container {
