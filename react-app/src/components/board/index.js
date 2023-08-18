@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserBoardsThunk } from "../../store/board"
-
 import BoardCard from './BoardCard/index';
 import OpenModalButton from "../OpenModalButton";
 import CreateBoardModal from "../board/CreateBoardModal";

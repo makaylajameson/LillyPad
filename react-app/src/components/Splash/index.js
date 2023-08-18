@@ -51,7 +51,7 @@ function SplashPage() {
 
                         <div className='sign-up-modal'>
                             <OpenModalButton
-                                buttonText="Sign Up - it's free!"
+                                buttonText="Sign up - it's free!"
                                 onItemClick={closeMenu}
                                 modalComponent={<SignupFormModal />}
                             />

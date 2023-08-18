@@ -33,7 +33,6 @@
   color: white;
   padding-bottom: 5px;
   border-bottom: 1px solid white;
-
 }
 
 .hidden {
@@ -64,7 +63,6 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  /* padding-left: 860px; */
 }
 
 .log-in {
@@ -88,14 +86,6 @@
 .right-nav-container {
   display: flex;
 }
-
-/* .splash-logo {
-  width: 100px;
-  height: 25px;
-  padding-left: 20px;
-  padding-top: 10px;
-
-} */
 
 .fa-user {
   color: white;

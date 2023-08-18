@@ -31,7 +31,7 @@ function Feature() {
                                 The different stages of a task. Start as
                                 simple as To Do, Doing or Done-or build
                                 a workflow custom fit to your team's
-                                needs. There's no wrong way to LillyPad.
+                                needs.
                             </p>
                         </div>
                         <div onClick={() => setSelected('Cards')} className={`p ${selected === 'Cards' && 'active-toggle c-color'}`}>

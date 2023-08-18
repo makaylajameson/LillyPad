@@ -38,7 +38,6 @@ function SignupFormModal() {
 		e.preventDefault();
 
 		const formData = new FormData();
-		// if (Object.values(errors).length) return
 
 		formData.append("first_name", firstName);
 		formData.append("last_name", lastName);

@@ -20,10 +20,10 @@ function LoginFormModal() {
     const email_validation = email.split("").find((el) => el === "@")
 
     if (!email_validation) {
-      frontendErrors.email = "Email required to log in."
+      frontendErrors.email = "👋 Email required to log in."
     }
     if (!password) {
-      frontendErrors.password = "Password is required to log in."
+      frontendErrors.password = "👋 Password is required to log in."
     }
 
     setFrontendErrors(frontendErrors)
@@ -54,7 +54,6 @@ function LoginFormModal() {
 
   return (
     <div className="log-in-splash">
-
 
       <form className='log-in-form' onSubmit={handleSubmit} >
         <h1 >Log In</h1>
