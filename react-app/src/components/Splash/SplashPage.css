@@ -69,7 +69,8 @@
 
     align-items: center;
     padding: 10px 40px;
-    background-color: #1d2125;
+    /* background-color: #1d2125; */
+    background-color: white;
     /* border-bottom: 0.5px solid #b6c2cf4f; */
 }
 

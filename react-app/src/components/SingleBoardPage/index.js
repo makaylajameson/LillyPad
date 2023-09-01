@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { getSingleBoardThunk } from '../../store/board'
@@ -35,7 +35,6 @@ const SingleBoardPage = () => {
                             <OpenModalButton
                                 buttonText={<><i className="fas fa-plus" /> Add a list</>}
                                 modalComponent={<CreateListModal boardId={id} />}
-
                             />
                         </div>
                     </div>

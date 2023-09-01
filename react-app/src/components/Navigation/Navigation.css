@@ -4,7 +4,7 @@
   top: 50px;
   border: .5px solid #b6c2cf;
   background-color: #5e6873;
-  padding: 20px;
+  padding: 30px;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -42,6 +42,7 @@
 .logo {
   width: 100px;
   padding-top: 8px;
+
 }
 
 .navbar-container {
@@ -50,8 +51,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background-color: #1d2125;
-  border-bottom: .5px solid #b6c2cf4f;
+  background-color: white;
+
+  border-bottom: .5px solid #686262b3;
 }
 
 .profile-pic {
@@ -76,7 +78,7 @@
 
 .current-boards {
   text-decoration: none;
-  color: white;
+  color: black;
   display: flex;
   margin-right: 20px;
   justify-content: center;

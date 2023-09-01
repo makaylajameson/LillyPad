@@ -12,7 +12,7 @@
 }
 
 .board-page-title {
-    color: #b6c2cf;
+    color: black;
     padding-left: 30px;
     padding-top: 50px;
 }
@@ -72,7 +72,7 @@
 .user-img-name {
     display: flex;
     flex-direction: row;
-    border-bottom: .5px solid #b6c2cf8f;
+    border-bottom: .5px solid #686262b3;
     padding-bottom: 20px;
     align-items: center;
     gap: 8px;
@@ -126,13 +126,13 @@
 }
 
 .select-background {
-    color: #9fadbc;
+    color: white;
     padding-left: 8px;
     font-size: large;
 }
 
 .board-title {
-    color: #9fadbc;
+    color: white;
     padding-top: 10px;
     width: 355px;
     display: flex;
@@ -172,7 +172,7 @@
 }
 
 .create-board-modal {
-    background-color: #25272a;
+    background-color: #57606a;
     position: absolute;
     bottom: -230px;
     right: -180px;

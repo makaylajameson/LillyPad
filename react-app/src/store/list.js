@@ -22,7 +22,6 @@ const deleteList = (id) => ({
 
 
 // Thunks
-
 export const createListThunk = (formData) => async (dispatch) => {
     const response = await fetch('/api/lists/new-list', {
         method: "POST",
@@ -91,6 +90,7 @@ const listReducer = (state = initialState, action) => {
             newState = {...state, boardLists: {...state.boardLists } }
             if(newState.boardLists[action.id]) delete newState.boardLists[action.id]
             return newState
+
         default:
             return state
     }

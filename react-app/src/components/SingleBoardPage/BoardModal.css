@@ -6,31 +6,38 @@
 }
 
 .single-board-title {
-    color: white;
+    color: black;
     padding-left: 28px;
     height: 15px;
+    padding-bottom: 10px;
     /* margin-bottom: 5px; */
 }
 
 .list-header-container {
     color: rgba(255, 255, 255, 0.885);
-    background: rgba(0, 0, 0, 0.815);
+    /* background: rgba(0, 0, 0, 0.815); */
     /* padding-left: 8px; */
     /* width: 150px; */
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     height: 20px;
     padding: 10px;
 }
 
 .list-container {
-    margin: 0px;
-    /* width: 200px; */
+    /* margin: 0px; */
+    width: 175px;
+    background: rgba(0, 0, 0, 0.815);
+    margin-top: 10px;
+    border-radius: 10px;
+
+
 
 }
+
 
 .single-list-detail {
     display: flex;
@@ -48,11 +55,28 @@
 }
 
 .add-list {
-    padding-top: 22px;
+    padding-top: 12px;
+}
+
+.add-card button {
+    height: 25px;
+    width: 155px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.533);
+    border: none;
+
+}
+
+.add-card {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .single-list-title {
-    width: 100px;
+    width: 120px;
+
 }
 
 .profile-pic-board {
@@ -72,7 +96,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #25272a;
+    background-color: #57606a;
     position: absolute;
     bottom: -60px;
     right: -160px;
@@ -89,7 +113,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #25272a;
+    background-color: #57606a;
     position: absolute;
     bottom: -60px;
     right: -160px;
@@ -130,7 +154,7 @@
 }
 
 .delete-modal-container {
-    background-color: #25272a;
+    background-color: #57606a;
     position: absolute;
     bottom: -60px;
     right: -160px;
@@ -181,4 +205,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.create-list-soon {
+    padding: 15px;
+    background-color: #57606a;
+    color: white;
+    border-radius: 10px;
+
+
 }

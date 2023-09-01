@@ -7,7 +7,6 @@ const CREATE_NEW_BOARD = 'boards/CREATE_NEW_BOARD';
 const EDIT_BOARD = 'boards/EDIT_BOARD';
 const DELETE_BOARD = 'boards/DELETE_BOARD';
 
-
 // Action Creator
 const getUserBoards = (boards) => ({
     type: GET_USER_BOARDS,
@@ -52,7 +51,7 @@ export const getSingleBoardThunk = (id) => async (dispatch) => {
     const response = await fetch(`/api/boards/${id}`)
 
     if (response.ok) {
-        const  get_single_board  = await response.json()
+        const get_single_board = await response.json()
         dispatch(getSingleBoard(get_single_board))
         return
     } else {
@@ -105,6 +104,7 @@ export const deleteBoardThunk = (id) => async dispatch => {
         return data
     }
 };
+
 
 // Initial State
 const initialState = {

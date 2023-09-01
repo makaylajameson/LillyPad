@@ -3,11 +3,13 @@ import thunk from 'redux-thunk';
 import session from './session'
 import boardReducer from './board';
 import listReducer from './list';
+import cardReducer from './card';
 
 const rootReducer = combineReducers({
   session,
   boards: boardReducer,
-  lists: listReducer
+  lists: listReducer,
+  cards: cardReducer,
 });
 
 

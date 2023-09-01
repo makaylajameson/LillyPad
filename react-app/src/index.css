@@ -1,6 +1,7 @@
 /* TODO Add site wide styles */
 html {
-background-color: rgba(0, 0, 0, 0.904);
+/* background-color: rgba(0, 0, 0, 0.904); */
+background-color: white;
 font-family: 'Baskervville', serif;
 margin: 0%;
 }

@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react'; import { useHistory } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import Feature from './toggleFeature'
+import React, { useEffect, useState, useRef } from 'react';
+import Feature from './toggleFeature';
 import OpenModalButton from '../OpenModalButton';
 import SignupFormModal from "../SignupFormModal";
 import './SplashPage.css';
@@ -8,8 +7,6 @@ import './SplashPage.css';
 
 function SplashPage() {
 
-    const history = useHistory()
-    // const user = useSelector(state => state.session.user)
     const ulRef = useRef(null);
     const [showMenu, setShowMenu] = useState(false);
     const closeMenu = () => setShowMenu(false);
@@ -28,7 +25,6 @@ function SplashPage() {
         return () => document.removeEventListener("click", closeMenuHandler);
     }, [showMenu]);
 
-    // if(user) history.push(`/${user.username.toLowerCase()}/boards`)
 
     return (
         <div className='sign-up-container'>
