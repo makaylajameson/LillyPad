@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Feature from './toggleFeature';
 import OpenModalButton from '../OpenModalButton';
 import SignupFormModal from "../SignupFormModal";
+import Footer from '../footer';
 import './SplashPage.css';
 
 
@@ -60,6 +61,7 @@ function SplashPage() {
                 <img alt='' className='wave-bar-img' src='https://images.ctfassets.net/rz1oowkt5gyp/7lTGeXbBRNRLaVk2MdBjtJ/99c266ed4cb8cc63bd0c388071f01ff6/white-wave-bg.svg' />
             </div>
             <Feature />
+            <Footer />
         </div>
     )
 }

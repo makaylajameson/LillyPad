@@ -14,7 +14,6 @@ const labelColors = [
 ]
 
 
-
 const EditCardModal = ({ card, listId }) => {
 
     const dispatch = useDispatch();

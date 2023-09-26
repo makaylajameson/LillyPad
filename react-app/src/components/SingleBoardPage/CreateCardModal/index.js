@@ -60,38 +60,38 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
       };
 
     return (
-        // <div className="create-card-background">
-        //     <div className="cover-img-preview" style={{ backgroundColor: labelColor }}></div>
-        //     <form onSubmit={handleSubmit} className='card-form'>
-        //         <label className='card-title-field'>
-        //             Card title
-        //             <input
-        //                 type="text"
-        //                 value={title}
-        //                 onChange={(e) => setTitle(e.target.value)}
-        //                 required
-        //             />
-        //             <span className='error-field'>{errors.title}</span>
-        //         </label>
-        //         <p>In list: {listTitle}</p>
-        //         <label className='card-title-field'>
-        //             Label color
-        //             <ul className="cover-image-container">
-        //                 {labelColors?.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
-        //             </ul>
-        //         </label>
+        <div className="create-card-background">
+            <div className="cover-img-preview" style={{ backgroundColor: labelColor }}></div>
+            <form onSubmit={handleSubmit} className='card-form'>
+                <label className='card-title-field'>
+                    Card title
+                    <input
+                        type="text"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        required
+                    />
+                    <span className='error-field'>{errors.title}</span>
+                </label>
+                <p>In list: {listTitle}</p>
+                <label className='card-title-field'>
+                    Label color
+                    <ul className="cover-image-container">
+                        {labelColors?.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
+                    </ul>
+                </label>
 
-        //         <label className='card-title-field'>
-        //             Description
-        //             <textarea onChange={(e) => setDescription(e.target.value)} style={errors.description && { boxShadow: 'rgb(239, 92, 72) 0px 0px 0px 2px inset' }} />
-        //             <span className='error-field'>{errors.description}</span>
-        //         </label>
-        //         <button type="submit" className='create-button'>Create</button>
-        //     </form>
-        // </div>
-        <div className="create-list-soon">
-            <h2>Feature Coming Soon 😊 </h2>
+                <label className='card-title-field'>
+                    Description
+                    <textarea onChange={(e) => setDescription(e.target.value)} style={errors.description && { boxShadow: 'rgb(239, 92, 72) 0px 0px 0px 2px inset' }} />
+                    <span className='error-field'>{errors.description}</span>
+                </label>
+                <button type="submit" className='create-button'>Create</button>
+            </form>
         </div>
+        // <div className="create-list-soon">
+        //     <h2>Feature Coming Soon 😊 </h2>
+        // </div>
     )
 }
 
