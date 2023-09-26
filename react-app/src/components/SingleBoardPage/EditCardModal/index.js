@@ -4,13 +4,19 @@ import { useModal } from "../../../context/Modal";
 import { editCardThunk } from "../../../store/card";
 import { getSingleBoardThunk } from '../../../store/board';
 
+import label1 from '../../../assets/label-1.jpg';
+import label2 from '../../../assets/label-2.jpg';
+import label3 from '../../../assets/label-3.jpg';
+import label4 from '../../../assets/label-4.jpg';
+import label5 from '../../../assets/label-5.jpg';
+
+
 const labelColors = [
-    '#A1BDD914',
-    '#E74C3C',
-    '#2874A6',
-    '#F4D03F',
-    '#27AE60',
-    '#AF7AC5'
+    label1,
+    label2,
+    label3,
+    label4,
+    label5,
 ]
 
 
