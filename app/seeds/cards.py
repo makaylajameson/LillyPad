@@ -3,73 +3,142 @@ from sqlalchemy.sql import text
 
 def seed_cards():
     card_1 = Card(
-        title="Card 1",
+        title="CRUD for Lists",
         list_id=1,
-        description="Description for Card 1",
-        label_color="https://i.pinimg.com/564x/f4/c3/af/f4c3af4a43d10b43b7f74ac362fd4454.jpg",
+        description="Need to be able to create, read, update, and delete lists",
+        label_color="#4287f5",
     )
 
     card_2 = Card(
-        title="Card 2",
+        title="CRUD for Comments",
         list_id=1,
-        description="Description for Card 2",
-        label_color="https://i.pinimg.com/474x/02/ff/1f/02ff1feafd330a5e3e7010554c8f0941.jpg",
+        description="Need to be able to create, read, update, and delete comments",
+        label_color="#f5f542",
     )
 
     card_3 = Card(
-        title="Card 3",
-        list_id=4,
-        description="Description for Card 3",
-        label_color="https://i.pinimg.com/474x/e8/3f/78/e83f78c128cebdea90951f2b041ebd92.jpg",
+        title="Auth Me",
+        list_id=2,
+        description="Complete Auth me for users",
+        label_color="#4287f5",
     )
 
     card_4 = Card(
-        title="Card 4",
+        title="CRUD for Cards",
         list_id=2,
-        description="Description for Card 4",
-        label_color="https://i.pinimg.com/474x/57/4e/4b/574e4bae17651afa9c3da1d893a14df6.jpg",
+        description="Need to be able to create, read, update, and delete cards",
+        label_color="#42f54b",
     )
 
     card_5 = Card(
-        title="Card 5",
-        list_id=2,
-        description="Description for Card 5",
-        label_color="https://i.pinimg.com/474x/74/3b/ee/743beebe4e86dae054e27ffbaa845626.jpg",
+        title="CSS for Cards",
+        list_id=3,
+        description="Do the CSS for the cards",
+        label_color="#cb42f5",
     )
 
     card_6 = Card(
-        title="Card 6",
+        title="ASW for Profile Image",
         list_id=3,
-        description="Description for Card 6",
-        label_color="https://i.pinimg.com/474x/57/4e/4b/574e4bae17651afa9c3da1d893a14df6.jpg",
+        description="Implement AWS for profile image",
+        label_color="#4245f5",
     )
 
     card_7 = Card(
         title="Card 7",
-        list_id=3,
+        list_id=4,
         description="Description for Card 7",
-        label_color="https://i.pinimg.com/474x/c9/a2/42/c9a242873112aa884b1fa7b944a56ba3.jpg",
+        label_color="#4245f5",
     )
 
     card_8 = Card(
         title="Card 8",
         list_id=4,
         description="Description for Card 8",
-        label_color="https://i.pinimg.com/474x/02/ff/1f/02ff1feafd330a5e3e7010554c8f0941.jpg",
+        label_color="#cb42f5",
     )
 
     card_9 = Card(
         title="Card 9",
         list_id=5,
         description="Description for Card 9",
-        label_color="https://i.pinimg.com/474x/e8/3f/78/e83f78c128cebdea90951f2b041ebd92.jpg",
+        label_color="#42f54b",
     )
 
     card_10 = Card(
         title="Card 10",
         list_id=5,
         description="Description for Card 10",
-        label_color="https://i.pinimg.com/474x/c9/a2/42/c9a242873112aa884b1fa7b944a56ba3.jpg",
+        label_color="#f54242",
+    )
+
+    card_11 = Card(
+        title="Card 11",
+        list_id=6,
+        description="Description for Card 9",
+        label_color="#f5f542",
+    )
+
+    card_12 = Card(
+        title="Card 12",
+        list_id=6,
+        description="Description for Card 10",
+        label_color="#42f54b",
+    )
+
+    card_13 = Card(
+        title="Card 9",
+        list_id=7,
+        description="Description for Card 9",
+        label_color="#cb42f5",
+    )
+
+    card_14 = Card(
+        title="Card 10",
+        list_id=7,
+        description="Description for Card 10",
+        label_color="#42f54b",
+    )
+    card_15 = Card(
+        title="Card 9",
+        list_id=8,
+        description="Description for Card 9",
+        label_color="#f54242",
+    )
+
+    card_16 = Card(
+        title="Card 10",
+        list_id=8,
+        description="Description for Card 10",
+        label_color="#4287f5",
+    )
+
+    card_17 = Card(
+        title="Card 9",
+        list_id=9,
+        description="Description for Card 9",
+        label_color="#4245f5",
+    )
+
+    card_18 = Card(
+        title="Card 10",
+        list_id=9,
+        description="Description for Card 10",
+        label_color="#f5f542",
+    )
+
+    card_19 = Card(
+        title="Card 9",
+        list_id=10,
+        description="Description for Card 9",
+        label_color="#cb42f5",
+    )
+
+    card_20 = Card(
+        title="Card 10",
+        list_id=10,
+        description="Description for Card 10",
+        label_color="#f54242",
     )
 
     db.session.add(card_1)

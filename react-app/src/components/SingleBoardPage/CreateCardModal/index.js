@@ -9,14 +9,16 @@ import label2 from '../../../assets/label-2.jpg';
 import label3 from '../../../assets/label-3.jpg';
 import label4 from '../../../assets/label-4.jpg';
 import label5 from '../../../assets/label-5.jpg';
+import label6 from '../../../assets/label-6.jpg';
 
 
-const labelColors = [
+const label_colors = [
     label1,
     label2,
     label3,
     label4,
     label5,
+    label6,
 ]
 
 const CreateCardModal = ({ listId, listTitle, boardId }) => {
@@ -27,7 +29,7 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
     const [title, setTitle] = useState('')
     const [errors, setErrors] = useState({})
     const [description, setDescription] = useState('')
-    const [labelColor, setLabelColor] = useState(labelColors[0])
+    const [labelColor, setLabelColor] = useState(label_colors[0])
     const [, setServerError] = useState(false);
 
 
@@ -66,7 +68,17 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
 
     return (
         <div className="create-card-background">
-            <div className="cover-img-preview" style={{ backgroundColor: labelColor }}></div>
+            <p className="create-card-title">Create card</p>
+
+            <p className='select-label'>Select Your Label Color:</p>
+            <div className="background-container">
+                {label_colors.map((url) => {
+                    return <button onClick={() => setLabelColor(url)} className="label_color" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
+                })}
+            </div>
+
+            {/* <div className="cover-img-preview" style={{ backgroundColor: labelColors }}></div> */}
+            <div className="card-img" style={{ backgroundImage: `url(${labelColor})` }}></div>
             <form onSubmit={handleSubmit} className='card-form'>
                 <label className='card-title-field'>
                     Card title
@@ -79,12 +91,12 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
                     <span className='error-field'>{errors.title}</span>
                 </label>
                 <p>In list: {listTitle}</p>
-                <label className='card-title-field'>
-                    Label color
+                {/* <label className='card-title-field'>
+                    Select Your Label Color:
                     <ul className="cover-image-container">
-                        {labelColors?.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
+                        {labelColors.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
                     </ul>
-                </label>
+                </label> */}
 
                 <label className='card-title-field'>
                     Description

@@ -33,6 +33,7 @@ const CreateBoardModal = () => {
     const [backgroundUrl, setBackgroundUrl] = useState(background_pics[0]);
     const [title, setTitle] = useState('');
     const [errors, setErrors] = useState({});
+    const [, setServerError] = useState(false);
 
 
     useEffect(() => {
