@@ -1,0 +1,14 @@
+.cover-image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.cover-image-option {
+    margin: 4px;
+    height: 50px;
+    border-radius: 3px;
+    cursor: pointer;
+}

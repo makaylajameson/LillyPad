@@ -56,7 +56,7 @@ def create_card():
         return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 # Edit a single Card
-@card_routes.route("/<int:id>", methods=["PUT"])
+@card_routes.route("/<int:id>/edit", methods=["PUT"])
 def card_to_update(id):
 
     form = CardForm()

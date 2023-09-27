@@ -2,23 +2,16 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../../context/Modal";
 import { createCardThunk } from "../../../store/card";
-import { getSingleBoardThunk} from "../../../store/board"
-
-import label1 from '../../../assets/label-1.jpg';
-import label2 from '../../../assets/label-2.jpg';
-import label3 from '../../../assets/label-3.jpg';
-import label4 from '../../../assets/label-4.jpg';
-import label5 from '../../../assets/label-5.jpg';
-import label6 from '../../../assets/label-6.jpg';
-
+import { getSingleBoardThunk } from "../../../store/board";
+import './CreateCardModal.css'
 
 const label_colors = [
-    label1,
-    label2,
-    label3,
-    label4,
-    label5,
-    label6,
+    '#4287f5',
+    '#f5f542',
+    '#42f54b',
+    '#cb42f5',
+    '#4245f5',
+    '#f54242',
 ]
 
 const CreateCardModal = ({ listId, listTitle, boardId }) => {
@@ -47,7 +40,7 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
         e.preventDefault();
 
         if (Object.keys(errors).length > 0) {
-          alert('Please fix the errors you have');
+            alert('Please fix the errors you have');
         } else {
             const formData = new FormData()
 
@@ -56,26 +49,33 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
             formData.append('description', description)
             formData.append('label_color', labelColor)
 
-          try {
-            await dispatch(createCardThunk(formData, listId));
-          } catch (error) {
-            setServerError(error.message);
-          }
-          await dispatch(getSingleBoardThunk(boardId));
-          await closeModal();
+            try {
+                await dispatch(createCardThunk(formData, listId));
+            } catch (error) {
+                setServerError(error.message);
+            }
+            await dispatch(getSingleBoardThunk(boardId));
+            await closeModal();
         }
-      };
+    };
 
     return (
         <div className="create-card-background">
             <p className="create-card-title">Create card</p>
 
-            <p className='select-label'>Select Your Label Color:</p>
-            <div className="background-container">
+            {/* <p className='select-label'>Select Your Label Color:</p> */}
+            {/* <div className="background-container">
                 {label_colors.map((url) => {
                     return <button onClick={() => setLabelColor(url)} className="label_color" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
                 })}
-            </div>
+            </div> */}
+
+            <label className='card-title-field'>
+            Select Your Label Color:
+                <ul className="cover-image-container">
+                    {label_colors.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
+                </ul>
+            </label>
 
             {/* <div className="cover-img-preview" style={{ backgroundColor: labelColors }}></div> */}
             <div className="card-img" style={{ backgroundImage: `url(${labelColor})` }}></div>

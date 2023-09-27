@@ -4,21 +4,14 @@ import { useModal } from "../../../context/Modal";
 import { editCardThunk } from "../../../store/card";
 import { getSingleBoardThunk } from '../../../store/board';
 
-import label1 from '../../../assets/label-1.jpg';
-import label2 from '../../../assets/label-2.jpg';
-import label3 from '../../../assets/label-3.jpg';
-import label4 from '../../../assets/label-4.jpg';
-import label5 from '../../../assets/label-5.jpg';
-
-
 const labelColors = [
-    label1,
-    label2,
-    label3,
-    label4,
-    label5,
+    '#4287f5',
+    '#f5f542',
+    '#42f54b',
+    '#cb42f5',
+    '#4245f5',
+    '#f54242',
 ]
-
 
 const EditCardModal = ({ card, listId }) => {
 
@@ -46,7 +39,7 @@ const EditCardModal = ({ card, listId }) => {
         e.preventDefault();
 
         if (Object.keys(errors).length > 0) {
-          alert('Please fix the errors you have');
+          alert('Please fix the errors');
         } else {
             const formData = new FormData()
 

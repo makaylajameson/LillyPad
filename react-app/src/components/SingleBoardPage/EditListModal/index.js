@@ -6,6 +6,7 @@ import { getSingleBoardThunk } from '../../../store/board';
 import '../BoardModal.css';
 
 const EditListModal = ({ list }) => {
+
     const dispatch = useDispatch()
     const { closeModal } = useModal()
 
@@ -28,7 +29,7 @@ const EditListModal = ({ list }) => {
         e.preventDefault();
 
         if (Object.keys(errors).length > 0) {
-          alert('Please fix the errors you have');
+          alert('Please fix the errors');
         } else {
             const formData = new FormData()
 
