@@ -63,9 +63,9 @@ const EditCardModal = ({ card, listId }) => {
         <div className="create-card-background">
             <div className="cover-img-preview" style={{ backgroundColor: labelColor }}></div>
             <form onSubmit={handleSubmit} className='card-form'>
-                <p>Edit card details:</p>
-                <label className='card-title-field'>
-                    Card title
+                <p className='card-title-field'>Edit Card Details:</p>
+                <label className='card-field'>
+                    Card title:
                     <input
                         type="text"
                         value={title}
@@ -77,14 +77,14 @@ const EditCardModal = ({ card, listId }) => {
                 </label>
                 <p>In list: {card.list_title}</p>
                 <label className='card-title-field'>
-                    Label color
+                    Label color:
                     <ul className="cover-image-container">
                         {labelColors.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
                     </ul>
                 </label>
 
-                <label className='card-title-field'>
-                    Description
+                <label className='card-field'>
+                    Description:
                     <textarea
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
@@ -92,7 +92,7 @@ const EditCardModal = ({ card, listId }) => {
                     />
                     <span className='error-field'>{errors.description}</span>
                 </label>
-                <button type="submit" className='create-button'>Update</button>
+                <button type="submit" className='create-card-button'>Update</button>
             </form>
         </div>
     )
