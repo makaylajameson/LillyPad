@@ -5,7 +5,10 @@ flex-direction: row;
 
 .card-title {
     background-color: transparent;
+    width: 2000px;
 }
+
+
 
 .card-color {
 
@@ -28,6 +31,7 @@ flex-direction: row;
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
+    width: 130px;
 }
 
 .modal-button-board-card-title {
