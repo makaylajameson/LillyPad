@@ -12,3 +12,35 @@
     border-radius: 3px;
     cursor: pointer;
 }
+
+.create-card-background {
+    padding: 15px;
+    background-color: #57606a;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.create-card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-field {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.create-card-button {
+    padding: 8px;
+    width: 80px;
+    background-color: rgb(0, 101, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 110px;
+
+}

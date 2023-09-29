@@ -2,6 +2,7 @@ import EditCardModal from '../EditCardModal';
 import DeleteCardModal from '../DeleteCardModal';
 import SingleCardModal from '../SingleCardModal';
 import OpenModalButton from '../../OpenModalButton';
+import './Card.css';
 
 const Card = ({ card, listId }) => {
 
@@ -9,13 +10,15 @@ const Card = ({ card, listId }) => {
 
         <div className="card-color" style={{ backgroundColor: card.label_color }}>
 
-            <div>
-                <OpenModalButton
-                    buttonText={card.title}
-                    modalComponent={<SingleCardModal card={card} />}
-                    className="card-title"></OpenModalButton>
+            <div className='whole-card-content'>
+                <div className='modal-button-board-card-title'>
+                    <OpenModalButton
+                        buttonText={card.title}
+                        modalComponent={<SingleCardModal card={card} />}
+                        className="card-title"></OpenModalButton>
+                </div>
 
-                <div>
+                <div className='modal-button-board-card'>
                     <OpenModalButton
                         buttonText={<i className="fas fa-pen card-icon" />}
                         modalComponent={<EditCardModal card={card} listId={listId} />}

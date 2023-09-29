@@ -1,0 +1,38 @@
+.whole-card-content {
+display: flex;
+flex-direction: row;
+}
+
+.card-title {
+    background-color: transparent;
+}
+
+.card-color {
+
+    /* border-radius: 20px; */
+    width: 10px;
+
+
+
+
+
+}
+
+.modal-button-board-card-title button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.924);
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    /* padding-right: 85px; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.modal-button-board-card-title {
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}

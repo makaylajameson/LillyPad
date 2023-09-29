@@ -1,8 +1,9 @@
 .page {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 1500px;
     /* border-radius: 5px; */
+    /* box-sizing: border-box; */
 }
 
 .single-board-title {
@@ -33,6 +34,7 @@
     background: rgba(0, 0, 0, 0.815);
     margin-top: 10px;
     border-radius: 10px;
+    /* height: 500px; */
 
 
 

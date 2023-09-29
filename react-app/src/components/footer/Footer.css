@@ -3,8 +3,12 @@
     color: black;
     border-top: 0.5px solid #686262b3;
     padding: 20px;
-    min-height: 15vh;
-    margin-top: auto;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .footer-title {

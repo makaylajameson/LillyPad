@@ -58,7 +58,7 @@ function SplashPage() {
                     <img alt='' className='copy-request-img' src='https://images.ctfassets.net/rz1oowkt5gyp/75rDABL8fyMtNLlUAtBxrg/c5e145977a86c41c47e17c69410c64f7/TrelloUICollage_4x.png?w=1140&fm=webp' />
                 </div>
 
-                <img alt='' className='wave-bar-img' src='https://images.ctfassets.net/rz1oowkt5gyp/7lTGeXbBRNRLaVk2MdBjtJ/99c266ed4cb8cc63bd0c388071f01ff6/white-wave-bg.svg' />
+                {/* <img alt='' className='wave-bar-img' src='https://images.ctfassets.net/rz1oowkt5gyp/7lTGeXbBRNRLaVk2MdBjtJ/99c266ed4cb8cc63bd0c388071f01ff6/white-wave-bg.svg' /> */}
             </div>
             <Feature />
             <Footer />

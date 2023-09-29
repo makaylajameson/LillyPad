@@ -61,14 +61,7 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
 
     return (
         <div className="create-card-background">
-            <p className="create-card-title">Create card</p>
-
-            {/* <p className='select-label'>Select Your Label Color:</p> */}
-            {/* <div className="background-container">
-                {label_colors.map((url) => {
-                    return <button onClick={() => setLabelColor(url)} className="label_color" style={{ backgroundImage: `url(${url})`, 'objectFit': 'contain' }}></button>
-                })}
-            </div> */}
+            <p className="create-card-title">Create New Card</p>
 
             <label className='card-title-field'>
             Select Your Label Color:
@@ -77,11 +70,10 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
                 </ul>
             </label>
 
-            {/* <div className="cover-img-preview" style={{ backgroundColor: labelColors }}></div> */}
             <div className="card-img" style={{ backgroundImage: `url(${labelColor})` }}></div>
             <form onSubmit={handleSubmit} className='card-form'>
-                <label className='card-title-field'>
-                    Card title
+                <label className='card-field'>
+                    Card title:
                     <input
                         type="text"
                         value={title}
@@ -90,20 +82,16 @@ const CreateCardModal = ({ listId, listTitle, boardId }) => {
                     />
                     <span className='error-field'>{errors.title}</span>
                 </label>
-                <p>In list: {listTitle}</p>
-                {/* <label className='card-title-field'>
-                    Select Your Label Color:
-                    <ul className="cover-image-container">
-                        {labelColors.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
-                    </ul>
-                </label> */}
 
-                <label className='card-title-field'>
-                    Description
+                <p>In list: {listTitle}</p>
+
+                <label className='card-field'>
+                    Description:
                     <textarea onChange={(e) => setDescription(e.target.value)} style={errors.description && { boxShadow: 'rgb(239, 92, 72) 0px 0px 0px 2px inset' }} />
                     <span className='error-field'>{errors.description}</span>
                 </label>
-                <button type="submit" className='create-button'>Create</button>
+
+                <button type="submit" className='create-card-button'>Create</button>
             </form>
         </div>
 
