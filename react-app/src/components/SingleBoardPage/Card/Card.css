@@ -8,17 +8,8 @@ flex-direction: row;
     width: 2000px;
 }
 
-
-
 .card-color {
-
-    /* border-radius: 20px; */
     width: 10px;
-
-
-
-
-
 }
 
 .modal-button-board-card-title button {
@@ -27,10 +18,8 @@ flex-direction: row;
     border: none;
     cursor: pointer;
     padding: 3px;
-    /* padding-right: 85px; */
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     width: 130px;
 }
 
