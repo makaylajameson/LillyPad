@@ -20,7 +20,7 @@ const EditListModal = ({ list }) => {
         let serverError = {}
 
         if (!title.length) serverError["title"] = "👋 List title is required"
-        if (title.length > 100) serverError["title"] = "👋 Title must be less than 100 characters"
+        if (title.length > 30) serverError["title"] = "👋 Title must be less than 30 characters"
         setErrors(serverError)
     }, [title])
 
