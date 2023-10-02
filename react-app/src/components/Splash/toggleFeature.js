@@ -12,7 +12,7 @@ function Feature() {
     return (
         <div className='feature-container'>
             <div className=''>
-                <h3 className='feature-title'>LillyPad Tips:</h3>
+                <h3 className='feature-title'>LillyPad Basics:</h3>
                 <h1 className='feature-title-h1'>A productivity powerhouse</h1>
                 <p className='p3'>Simple, flexible, and powerful. All it takes are boards, lists, and cards to get a clear view of who`s doing what and what needs to get done.</p>
                 <div className='toggle-container'>

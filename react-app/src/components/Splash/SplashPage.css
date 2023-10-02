@@ -95,6 +95,7 @@
 
 .feature-title {
     padding-left: 30px;
+    padding-top: 30px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.691);
 }
@@ -120,9 +121,9 @@
 }
 
 .toggle-img {
-    height: 350px;
+    height: 470px;
     padding-left: 60px;
-    padding-top: 70px;
+    padding-top: 10px;
 
 }
 
