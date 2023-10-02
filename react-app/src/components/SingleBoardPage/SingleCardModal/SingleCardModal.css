@@ -1,0 +1,13 @@
+.single-card-background {
+    background-color: #57606a;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    color: white;
+    overflow-wrap: break-word;
+}
+
+.single-card-title {
+    font-size: 40px;
+    text-align: center;
+}

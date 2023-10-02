@@ -1,6 +1,7 @@
 .whole-card-content {
 display: flex;
 flex-direction: row;
+
 }
 
 .card-title {
@@ -18,14 +19,11 @@ flex-direction: row;
     border: none;
     cursor: pointer;
     padding: 3px;
-    display: flex;
-    flex-direction: row;
     width: 130px;
+    overflow-wrap: break-word;
 }
 
 .modal-button-board-card-title {
 
-    display: flex;
-    flex-direction: row;
     margin-left: 15px;
 }
