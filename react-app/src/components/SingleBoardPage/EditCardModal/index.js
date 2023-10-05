@@ -13,7 +13,7 @@ const labelColors = [
     '#f54242',
 ]
 
-const EditCardModal = ({ card, listId, cardId }) => {
+const EditCardModal = ({ card, listId}) => {
 
     const dispatch = useDispatch();
     const { closeModal } = useModal();
@@ -46,7 +46,7 @@ const EditCardModal = ({ card, listId, cardId }) => {
             formData.append('title', title)
             formData.append('list_id', listId)
             formData.append('description', description)
-            formData.append('label', labelColor)
+            formData.append('label_color', labelColor)
             formData.append('board_id', boardId)
 
           try {
