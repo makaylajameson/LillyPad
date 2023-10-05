@@ -13,7 +13,7 @@ const labelColors = [
     '#f54242',
 ]
 
-const EditCardModal = ({ card, listId }) => {
+const EditCardModal = ({ card, listId, cardId }) => {
 
     const dispatch = useDispatch();
     const { closeModal } = useModal();
@@ -50,7 +50,7 @@ const EditCardModal = ({ card, listId }) => {
             formData.append('board_id', boardId)
 
           try {
-            await dispatch(editCardThunk(formData, card.id, listId))
+            await dispatch(editCardThunk(card.id, formData))
           } catch (error) {
             setServerError(error.message);
           }
@@ -77,11 +77,27 @@ const EditCardModal = ({ card, listId }) => {
                 </label>
                 <p>In list: {card.list_title}</p>
                 <label className='card-title-field'>
-                    Label color:
-                    <ul className="cover-image-container">
-                        {labelColors.map(option => <div className="cover-image-option" key={option} style={{ backgroundColor: option }} onClick={() => setLabelColor(option)}></div>)}
-                    </ul>
-                </label>
+                Select Your Label Color:
+                <ul className="cover-image-container">
+                    {labelColors.map(option => (
+                        <div
+                            className={`cover-image-option ${option === labelColor ? 'selected' : ''}`}
+                            key={option}
+                            style={{ backgroundColor: option }}
+                            onClick={() => setLabelColor(option)}
+                        ></div>
+                    ))}
+                </ul>
+            </label>
+
+            {/* Selected color indicator */}
+            <div className="selected-color-indicator-container">
+                <p>Selected Color:</p>
+                <div
+                    className="selected-color-indicator"
+                    style={{ backgroundColor: labelColor }}
+                ></div>
+            </div>
 
                 <label className='card-field'>
                     Description:

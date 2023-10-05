@@ -9,10 +9,9 @@ const createCard = (card) => ({
     card
 });
 
-const editCard = (card, listId) => ({
+const editCard = (card) => ({
     type: EDIT_CARD,
-    card,
-    listId
+    card
 });
 
 const deleteCard = (id) => ({
@@ -37,15 +36,17 @@ export const createCardThunk = (formData, listId) => async (dispatch) => {
     }
 }
 
-export const editCardThunk = (cardId, formData, listId) => async (dispatch) => {
-    const response = await fetch(`/api/cards/${cardId}/edit`, {
+export const editCardThunk = (id, formData) => async (dispatch) => {
+    console.log("FORM DATA-------", formData)
+    console.log("ID---------", id)
+    const response = await fetch(`/api/cards/${id}`, {
         method: "PUT",
         body: formData
     })
 
     if (response.ok) {
         const card = await response.json()
-        await dispatch(editCard(card, listId, cardId))
+        await dispatch(editCard(card))
         return card;
     } else {
         const data = await response.json()

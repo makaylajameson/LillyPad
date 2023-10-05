@@ -48,3 +48,17 @@
 .create-card-container {
     padding-top: 10px;
 }
+
+.selected-color-indicator-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.selected-color-indicator {
+    width: 70px;
+    height: 40px;
+    border-radius: 3px;
+    margin-left: 10px;
+}

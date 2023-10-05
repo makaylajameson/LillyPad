@@ -39,6 +39,8 @@ export const createListThunk = (formData) => async (dispatch) => {
 }
 
 export const editListThunk = (id, formData) => async (dispatch) => {
+    console.log("FORM DATA-------", formData)
+    console.log("ID---------", id)
     const response = await fetch(`/api/lists/${id}`, {
         method: "PUT",
         body: formData
